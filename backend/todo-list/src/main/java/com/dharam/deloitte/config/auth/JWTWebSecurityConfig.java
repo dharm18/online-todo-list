@@ -63,6 +63,16 @@ public class JWTWebSecurityConfig extends WebSecurityConfigurerAdapter {
             .exceptionHandling().authenticationEntryPoint(jwtUnAuthorizedResponseAuthenticationEntryPoint).and()
             .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
             .authorizeRequests()
+            .antMatchers("/",
+                    "/favicon.ico",
+                    "/**/*.png",
+                    "/**/*.gif",
+                    "/**/*.svg",
+                    "/**/*.jpg",
+                    "/**/*.html",
+                    "/**/*.css",
+                    "/**/*.js")
+                    .permitAll()
             .anyRequest().authenticated();
 
        httpSecurity
