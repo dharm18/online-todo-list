@@ -1,0 +1,18 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div><a routerLink="/home" class="navbar-brand">
+            Online TODO</a></div>
+
+        <ul class="navbar-nav">
+            <li><a *ngIf="authenticationService.isUserLoggedIn()" routerLink="/home" class="nav-link">Home</a></li>
+            <li><a *ngIf="authenticationService.isUserLoggedIn()" routerLink="/todo-list" class="nav-link">Todo List</a></li>
+        </ul>
+
+        <ul class="navbar-nav navbar-collapse justify-content-end">
+                <li><a *ngIf="!authenticationService.isUserLoggedIn()" routerLink="/login" class="nav-link">Login</a></li>
+                <li><a *ngIf="!authenticationService.isUserLoggedIn()" routerLink="/signup" class="nav-link">Sign Up</a></li>
+                <li><span class="nav-link">{{authenticationService.getAuthenticatedUser()}}</span></li>
+                <li><a *ngIf="authenticationService.isUserLoggedIn()" routerLink="/logout" class="nav-link">Logout</a></li>
+        </ul>
+    </nav>
+</header>

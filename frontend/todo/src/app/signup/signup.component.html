@@ -1,0 +1,42 @@
+
+<div class="container">
+  <H1>Sign Up</H1>
+  <div class="alert alert-warning" *ngIf="errorResponse">{{errorResponse}}</div>
+  <div class="alert alert-success" *ngIf="successResponse">{{successResponse.message}}</div>
+  <div class="alert alert-warning" *ngIf="signupForm.dirty && signupForm.invalid">Enter valid values</div>
+  <div class="alert alert-warning" *ngIf="signupForm.dirty && email.invalid">Enter valid email address</div>
+  <div class="alert alert-warning" *ngIf="signupForm.dirty && password.invalid">Password length should be in between 6 and 20</div>
+  
+  <form (ngSubmit)="!signupForm.invalid && signup(signupForm)" #signupForm="ngForm">
+    <fieldset class="form-group">
+      <label>Name</label>
+      <input type="text" #name="ngModel" 
+            [(ngModel)]="signUpRequest.name" class="form-control" 
+                name="name" required="required">
+    </fieldset>
+
+    <fieldset class="form-group">
+        <label>Username</label>
+        <input type="text" #username="ngModel"
+        [ngModel]="signUpRequest.username" class="form-control" name="username" required="required" >
+    </fieldset>
+
+    <fieldset class="form-group">
+        <label>Email</label>
+        <input type="email" #email="ngModel"
+        [ngModel]="signUpRequest.email"
+        class="form-control" name="email" required="required" >
+    </fieldset>
+
+    <fieldset class="form-group">
+        <label>Password</label>
+        <input type="password" #password="ngModel"
+        [ngModel]="signUpRequest.password"
+        class="form-control" name="password" required="required" minlength="6" and maxlength="20">
+    </fieldset>
+<!-- {{signupForm.value | json }} -->
+    <button type="submit" class="btn btn-success">Sign Up</button>
+    &nbsp;&nbsp;
+    Already Registered? <a class="btn btn-secondary" routerLink="/login">Login here</a>
+  </form>
+</div>
