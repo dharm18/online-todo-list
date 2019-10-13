@@ -1,4 +1,11 @@
 # online-todo-list
+## features considered
+1. User Role Based JWT authentication with signup feature
+2. User can create TODOs
+3. Todo list is sorted by target date in descending order
+4. User can check/uncheck todo
+5. User can delete the todo
+6. Login/Logout feature
 
 # To Run Jar file
 java -jar todo-list-0.0.1-SNAPSHOT.jar
