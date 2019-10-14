@@ -17,3 +17,11 @@ java -jar todo-list-0.0.1-SNAPSHOT.jar
 # To regenerate angular pages
 1. Goto frontend/frontend/todo code directory
 2. RUN: maven clean package
+
+# Code Explaination
+
+The entire coding logic is divided into two main part, frontend and backend code. Frontend is developed using Angular 8 and backend using Spring Boot 2 version. These technologies have been chosen because of their ease of development.
+
+## Front End Code Explaination
+
+## Back End Code Explaination
