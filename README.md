@@ -9,7 +9,8 @@
 
 # To Run Jar file
 java -jar todo-list-0.0.1-SNAPSHOT.jar
-visit localhost:8080
+
+and visit localhost:8080
 
 # To build jar package
 1. Goto backend/todo-list code directory
