@@ -23,5 +23,12 @@ java -jar todo-list-0.0.1-SNAPSHOT.jar
 The entire coding logic is divided into two main part, frontend and backend code. Frontend is developed using Angular 8 and backend using Spring Boot 2 version. These technologies have been chosen because of their ease of development.
 
 ## Front End Code Explaination
+Front end code is developed using components like login, logout, menu, home, footer, todo list and todo.
+Similarly, angular code is architected into multiple layer with service, constant and component layer.
+Additionally, routing has been considered with active routing and current authentication.
 
 ## Back End Code Explaination
+Backend is organised into JwtAuthenticationRestController and TodoController process. Appropriately Model beans, service and repository classes/interfaces have been created. JPARepository interface is used to provide JPA features around the model classes.
+
+H2 with hibernate is configured to store in-memory data.
+Similarly, exception handling, utility, web security classes have been configured.
