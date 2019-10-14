@@ -37,8 +37,8 @@ H2 with hibernate is configured to store in-memory data.
 Similarly, exception handling, utility, web security classes have been configured.
 
 ## Things to consider in future
-1. JUnit test cases
-2. angular test cases
-3. e2e test cases
-4. Spring Test cases
-5. Code optimisation
+1. JUnit test cases - considering all testcases for each method.
+2. angular test cases - - considering all testcases for each method.
+3. e2e test cases - e2e test script
+4. Spring Test cases - e2e integration testing
+5. Code optimisation - using caching to store todos at client/server side.
