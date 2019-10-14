@@ -26,9 +26,17 @@ The entire coding logic is divided into two main part, frontend and backend code
 Front end code is developed using components like login, logout, menu, home, footer, todo list and todo.
 Similarly, angular code is architected into multiple layer with service, constant and component layer.
 Additionally, routing has been considered with active routing and current authentication.
+Angular code is packaged using 'ng build' command in root directory and dist files are generated into public folder of backend code' resources folder
 
 ## Back End Code Explaination
 Backend is organised into JwtAuthenticationRestController and TodoController process. Appropriately Model beans, service and repository classes/interfaces have been created. JPARepository interface is used to provide JPA features around the model classes.
 
 H2 with hibernate is configured to store in-memory data.
 Similarly, exception handling, utility, web security classes have been configured.
+
+## Things to consider in future
+1. JUnit test cases
+2. angular test cases
+3. e2e test cases
+4. Spring Test cases
+5. Code optimisation
