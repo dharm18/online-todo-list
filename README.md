@@ -1,4 +1,4 @@
-# online-todo-list
+# online-todo-list ![Java CI with Maven](https://github.com/dharm18/online-todo-list/workflows/Java%20CI%20with%20Maven/badge.svg)
 ## features considered
 1. User Role Based JWT authentication with signup feature
 2. User can create TODOs
