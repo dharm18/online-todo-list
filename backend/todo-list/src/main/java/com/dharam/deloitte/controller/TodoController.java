@@ -31,6 +31,10 @@ public class TodoController {
 	@Autowired
 	private TodoService todoService;
 
+	public TodoController(TodoService todoService) {
+		this.todoService = todoService;
+	}
+
 	@GetMapping("/users/{userId}/todos")
 	public List<Todo> getTodoListByUserId(@CurrentUser UserPrincipal currentUser, @PathVariable String userId) {
 		return todoService.todoListByUserId(currentUser.getId());

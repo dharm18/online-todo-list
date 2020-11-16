@@ -37,7 +37,7 @@ export class AuthenticationService {
   }
 
   getAuthenticatedToken() {
-    if(this.getAuthenticatedUser())
+    if (this.getAuthenticatedUser())
       return sessionStorage.getItem(TOKEN)
   }
 
