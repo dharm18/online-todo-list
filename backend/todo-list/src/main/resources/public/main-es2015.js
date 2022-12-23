@@ -1099,8 +1099,8 @@ let HttpInterceptorAuthService = class HttpInterceptorAuthService {
         this.authenticationService = authenticationService;
     }
     intercept(request, next) {
-        let basicAuthHeaderString = this.authenticationService.getAuthenticatedToken();
-        let username = this.authenticationService.getAuthenticatedUser();
+        const basicAuthHeaderString = this.authenticationService.getAuthenticatedToken();
+        const username = this.authenticationService.getAuthenticatedUser();
         if (basicAuthHeaderString && username) {
             request = request.clone({
                 setHeaders: {
