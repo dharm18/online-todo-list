@@ -32,9 +32,9 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
           cache-dependency-path: "frontend/todo/package-lock.json"
-    - name: npm clean install and npm run build
+    - name: npm install and npm run build
       run: |
-          npm clean install
+          npm install
           npm run build --if-present
       working-directory: frontend/todo
     - name: Set up JDK 1.8
